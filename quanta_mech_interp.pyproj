@@ -5,7 +5,7 @@
     <ProjectGuid>ff6cc0a5-3fbf-4732-845f-46720839742e</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Tests\tests_suite.py</StartupFile>
+    <StartupFile>tests\tests_suite.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,40 +25,40 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="QuantaTools\ablate_add_useful.py" />
-    <Compile Include="QuantaTools\ablate_config.py" />
-    <Compile Include="QuantaTools\ablate_hooks.py" />
-    <Compile Include="QuantaTools\algo_config.py" />
-    <Compile Include="QuantaTools\algo_search.py" />
-    <Compile Include="QuantaTools\model_config.py" />
-    <Compile Include="QuantaTools\model_loss_graph.py" />
-    <Compile Include="QuantaTools\model_pca.py" />
-    <Compile Include="QuantaTools\model_sae.py" />
-    <Compile Include="QuantaTools\model_sae_graph.py" />
-    <Compile Include="QuantaTools\model_sae_train.py" />
-    <Compile Include="QuantaTools\model_token_to_char.py" />
-    <Compile Include="QuantaTools\model_train.py" />
-    <Compile Include="QuantaTools\model_train_json.py" />
-    <Compile Include="QuantaTools\quanta_add_attn_tags.py" />
-    <Compile Include="QuantaTools\quanta_constants.py" />
-    <Compile Include="QuantaTools\quanta_file_utils.py" />
-    <Compile Include="QuantaTools\quanta_filter.py" />
-    <Compile Include="QuantaTools\quanta_map.py" />
-    <Compile Include="QuantaTools\quanta_map_attention.py" />
-    <Compile Include="QuantaTools\quanta_map_binary.py" />
-    <Compile Include="QuantaTools\quanta_map_failperc.py" />
-    <Compile Include="QuantaTools\quanta_map_impact.py" />
-    <Compile Include="QuantaTools\useful_config.py" />
-    <Compile Include="QuantaTools\useful_node.py" />
-    <Compile Include="QuantaTools\__init__.py" />
+    <Compile Include="quanta_tools\ablate_add_useful.py" />
+    <Compile Include="quanta_tools\ablate_config.py" />
+    <Compile Include="quanta_tools\ablate_hooks.py" />
+    <Compile Include="quanta_tools\algo_config.py" />
+    <Compile Include="quanta_tools\algo_search.py" />
+    <Compile Include="quanta_tools\model_config.py" />
+    <Compile Include="quanta_tools\model_loss_graph.py" />
+    <Compile Include="quanta_tools\model_pca.py" />
+    <Compile Include="quanta_tools\model_sae.py" />
+    <Compile Include="quanta_tools\model_sae_graph.py" />
+    <Compile Include="quanta_tools\model_sae_train.py" />
+    <Compile Include="quanta_tools\model_token_to_char.py" />
+    <Compile Include="quanta_tools\model_train.py" />
+    <Compile Include="quanta_tools\model_train_json.py" />
+    <Compile Include="quanta_tools\quanta_add_attn_tags.py" />
+    <Compile Include="quanta_tools\quanta_constants.py" />
+    <Compile Include="quanta_tools\quanta_file_utils.py" />
+    <Compile Include="quanta_tools\quanta_filter.py" />
+    <Compile Include="quanta_tools\quanta_map.py" />
+    <Compile Include="quanta_tools\quanta_map_attention.py" />
+    <Compile Include="quanta_tools\quanta_map_binary.py" />
+    <Compile Include="quanta_tools\quanta_map_failperc.py" />
+    <Compile Include="quanta_tools\quanta_map_impact.py" />
+    <Compile Include="quanta_tools\useful_config.py" />
+    <Compile Include="quanta_tools\useful_node.py" />
+    <Compile Include="quanta_tools\__init__.py" />
     <Compile Include="setup.py" />
-    <Compile Include="Tests\tests_huggingface.py" />
-    <Compile Include="Tests\tests_suite.py" />
-    <Compile Include="Tests\tests_useful.py" />
+    <Compile Include="tests\tests_huggingface.py" />
+    <Compile Include="tests\tests_suite.py" />
+    <Compile Include="tests\tests_useful.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="QuantaTools\" />
-    <Folder Include="Tests\" />
+    <Folder Include="quanta_tools\" />
+    <Folder Include="tests\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
