@@ -42,7 +42,7 @@ from .quanta_map_impact import get_answer_impact, get_question_answer_impact, is
 
 # algo_*.py: Contains utilities to support model algorithm investigation
 from .algo_config import AlgoConfig
-from .algo_search import search_and_tag_digit_position, search_and_tag_digit, search_and_tag
+from .algo_search import search_and_tag_digit_position, search_and_tag_digit, search_and_tag, SubTaskBase
 
 
 
