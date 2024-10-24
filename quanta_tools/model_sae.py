@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import IterableDataset, DataLoader, TensorDataset
+from torch.utils.data import DataLoader, TensorDataset
 import transformer_lens.utils as utils
 import itertools
 from sklearn.model_selection import ParameterGrid

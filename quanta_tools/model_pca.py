@@ -75,10 +75,10 @@ def calc_pca_for_an(cfg, node_location : NodeLocation, test_inputs, title, error
         attention_outputs = []
         for i in range(len(test_inputs)):
 
-          # Output of individual heads, without final bias
-          attention_cache=the_cache["result", node_location.layer, "attn"] # Output of individual heads, without final bias
-          attention_output=attention_cache[i]  # Shape [n_ctx, n_head, d_model]
-          attention_outputs.append(attention_output[node_location.position, node_location.num, :])
+            # Output of individual heads, without final bias
+            attention_cache=the_cache["result", node_location.layer, "attn"] # Output of individual heads, without final bias
+            attention_output=attention_cache[i]  # Shape [n_ctx, n_head, d_model]
+            attention_outputs.append(attention_output[node_location.position, node_location.num, :])
 
         attn_outputs = torch.stack(attention_outputs, dim=0).cpu()
 

@@ -2,10 +2,7 @@ import torch
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
-from torch.utils.data import DataLoader, TensorDataset
 import transformer_lens.utils as utils
-
-from quanta_tools.model_sae import AdaptiveSparseAutoencoder 
 
 
 def generate_encodings(model, sae, dataloader, layer_num, max_samples=10000):

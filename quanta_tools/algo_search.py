@@ -1,9 +1,8 @@
 import itertools
 from abc import ABC, abstractmethod
 
-from .useful_config import UsefulConfig
 from .quanta_constants import QType, QCondition
-from .quanta_filter import FilterNode, FilterOr, FilterHead, FilterAlgo, FilterContains, FilterPosition, FilterImpact, FilterAlgo, filter_nodes
+from .quanta_filter import FilterAlgo, FilterAlgo, filter_nodes
 from .algo_config import AlgoConfig
 
 
@@ -92,10 +91,10 @@ def search_and_tag_digit(cfg, acfg, sub_task_functions, the_impact_digit,
     the_tag = sub_task_functions.tag(the_impact_digit)
 
     if delete_existing_tags:
-      # If a given search is run multiple times, the second run is impacted 
-      # by the output of the first run via below code: FilterAlgo(the_tag, QCondition.NOT) 
-      # Deleting the tags avoids this undesirable behavior.
-      cfg.useful_nodes.reset_node_tags(QType.ALGO.value, the_tag)        
+        # If a given search is run multiple times, the second run is impacted 
+        # by the output of the first run via below code: FilterAlgo(the_tag, QCondition.NOT) 
+        # Deleting the tags avoids this undesirable behavior.
+        cfg.useful_nodes.reset_node_tags(QType.ALGO.value, the_tag)        
 
     from_position = cfg.min_useful_position
     to_position = cfg.max_useful_position

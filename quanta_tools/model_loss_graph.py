@@ -60,10 +60,10 @@ def plot_loss_lines(cfg, steps_to_graph : int, raw_lines_list,
     if x is None:
         x=np.arange(len(lines_list[0]))
     if cfg.graph_file_suffix != "" :
-      fig = go.Figure(layout={})
-      print(full_title)
+        fig = go.Figure(layout={})
+        print(full_title)
     else:
-      fig = go.Figure(layout={'title':full_title})
+        fig = go.Figure(layout={'title':full_title})
 
     fig.update_xaxes(
         title=xaxis,
@@ -88,15 +88,15 @@ def plot_loss_lines(cfg, steps_to_graph : int, raw_lines_list,
     if log_y:
         fig.update_layout(yaxis_type="log")
     else:
-      # Calculate the max y-value rounded up to the nearest integer
-      y_max = 1
-      for k in range(len(lines_list)):
-          y_max = max(y_max, math.ceil(max(lines_list[k])) )
-      y_max = 3 # manual override if necessary
+        # Calculate the max y-value rounded up to the nearest integer
+        y_max = 1
+        for k in range(len(lines_list)):
+            y_max = max(y_max, math.ceil(max(lines_list[k])) )
+        y_max = 3 # manual override if necessary
 
-      # Update layout to set the y-axis min to 0 and max to the calculated y_max
-      fig.update_layout(
-          yaxis=dict(range=[0, y_max])
+        # Update layout to set the y-axis min to 0 and max to the calculated y_max
+        fig.update_layout(
+            yaxis=dict(range=[0, y_max])
       )
 
     plot_loss_lines_layout(cfg, fig, tick_font_size=tick_font_size, x=x, width=width,height=height)

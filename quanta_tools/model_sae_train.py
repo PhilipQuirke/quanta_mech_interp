@@ -4,11 +4,9 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.optim.lr_scheduler import ReduceLROnPlateau
-from torch.utils.data import IterableDataset, DataLoader, TensorDataset
+from torch.utils.data import  DataLoader
 import transformer_lens.utils as utils
 import hashlib
-import itertools
 from sklearn.model_selection import ParameterGrid
 from skopt import gp_minimize
 from skopt.space import Real, Integer, Categorical
