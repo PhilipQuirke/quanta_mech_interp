@@ -33,7 +33,7 @@ from .model_pca import calc_pca_for_an, pca_evr_0_percent
 
 # quanta_*.py: Contains ways to detect and graph model behavior (aka quanta) 
 from .quanta_add_attn_tags import add_node_attention_tags
-from .quanta_map import create_colormap, calc_quanta_map
+from .quanta_map import create_colormap, pale_color, calc_quanta_map
 from .quanta_map_attention import get_quanta_attention
 from .quanta_map_failperc import get_quanta_fail_perc
 from .quanta_map_binary import get_quanta_binary, get_quanta_algo
