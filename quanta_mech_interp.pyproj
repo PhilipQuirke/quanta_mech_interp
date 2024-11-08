@@ -62,7 +62,6 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="pyproject.toml" />
-    <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.12" />
