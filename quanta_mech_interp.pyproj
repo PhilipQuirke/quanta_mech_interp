@@ -51,7 +51,6 @@
     <Compile Include="QuantaMechInterp\useful_config.py" />
     <Compile Include="QuantaMechInterp\useful_node.py" />
     <Compile Include="QuantaMechInterp\__init__.py" />
-    <Compile Include="setup.py" />
     <Compile Include="tests\tests_huggingface.py" />
     <Compile Include="tests\tests_suite.py" />
     <Compile Include="tests\tests_useful.py" />
