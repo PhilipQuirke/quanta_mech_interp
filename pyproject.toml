@@ -27,7 +27,9 @@ classifiers = [
 requires = ">=3.10"
 
 [tool.setuptools]
-packages = ["QuantaMechInterp"]
+packages = {find = {}}
 
-[tool.setuptools.package-dir]
-QuantaMechInterp="QuantaMechInterp"
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["QuantaMechInterp*"]
+
