@@ -27,9 +27,8 @@ classifiers = [
 requires = ">=3.10"
 
 [tool.setuptools]
-packages = {find = {}}
+packages = ["QuantaMechInterp"]
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["QuantaMechInterp*"]
+[tool.setuptools.package-dir]
+QuantaTextToSql="QuantaMechInterp"
 
