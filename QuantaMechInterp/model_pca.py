@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 import warnings
-from quanta_tools.useful_node import NodeLocation
+from QuantaMechInterp.useful_node import NodeLocation
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score, calinski_harabasz_score

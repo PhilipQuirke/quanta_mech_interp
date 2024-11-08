@@ -1,11 +1,11 @@
 import unittest
 
-from quanta_tools.model_token_to_char import token_to_char, tokens_to_string
+from QuantaMechInterp.model_token_to_char import token_to_char, tokens_to_string
 
-from quanta_tools.useful_node import UsefulNode, UsefulNodeList
+from QuantaMechInterp.useful_node import UsefulNode, UsefulNodeList
 
-from quanta_tools.quanta_constants import QType
-from quanta_tools.quanta_map_impact import sort_unique_digits
+from QuantaMechInterp.quanta_constants import QType
+from QuantaMechInterp.quanta_map_impact import sort_unique_digits
 
 
 class TestUseful(unittest.TestCase):

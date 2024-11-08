@@ -12,7 +12,7 @@ from skopt import gp_minimize
 from skopt.space import Real, Integer, Categorical
 from skopt.utils import use_named_args
 
-from quanta_tools.model_sae import AdaptiveSparseAutoencoder, save_sae_to_huggingface
+from QuantaMechInterp.model_sae import AdaptiveSparseAutoencoder, save_sae_to_huggingface
 
 
 def train_sae_epoch(sae, activation_generator, epoch, learning_rate, max_grad_norm=1.0):

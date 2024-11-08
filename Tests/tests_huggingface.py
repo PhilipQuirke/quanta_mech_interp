@@ -7,15 +7,15 @@ import re
 from huggingface_hub import HfApi
 from huggingface_hub import hf_hub_download
 
-from quanta_tools.model_token_to_char import token_to_char, tokens_to_string
-from quanta_tools.model_train_json import download_huggingface_json, load_training_json
+from QuantaMechInterp.model_token_to_char import token_to_char, tokens_to_string
+from QuantaMechInterp.model_train_json import download_huggingface_json, load_training_json
 
-from quanta_tools.useful_node import NodeLocation, UsefulNode, UsefulNodeList
+from QuantaMechInterp.useful_node import NodeLocation, UsefulNode, UsefulNodeList
 
-from quanta_tools.quanta_map_impact import sort_unique_digits, get_quanta_impact
-from quanta_tools.quanta_map_attention import get_quanta_attention
+from QuantaMechInterp.quanta_map_impact import sort_unique_digits, get_quanta_impact
+from QuantaMechInterp.quanta_map_attention import get_quanta_attention
 
-from quanta_tools.algo_config import AlgoConfig
+from QuantaMechInterp.algo_config import AlgoConfig
 
 
 class TestHuggingFace(unittest.TestCase):
