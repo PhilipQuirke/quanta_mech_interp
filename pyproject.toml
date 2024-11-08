@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "QuantaMechInterp"
 version = "1.0"
-description = "Mechanistic Interpretability tools"
+description = "Quanta Mechanistic Interpretability tools"
 authors = [{name = "Philip Quirke et al", email = "philipquirkenz@gmail.com"}]
 dependencies = [
     "numpy>=1.18.1",
@@ -30,5 +30,5 @@ requires = ">=3.10"
 packages = ["QuantaMechInterp"]
 
 [tool.setuptools.package-dir]
-QuantaTextToSql="QuantaMechInterp"
+QuantaMechInterp="QuantaMechInterp"
 
