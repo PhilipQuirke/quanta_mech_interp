@@ -14,7 +14,7 @@ dependencies = [
     "matplotlib",
     "scikit-learn",
     "scikit-optimize",
-    "transformers_lens",
+    "transformer_lens",
     "transformers",
     "torch"    
 ]
