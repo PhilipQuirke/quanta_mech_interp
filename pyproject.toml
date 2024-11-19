@@ -9,14 +9,15 @@ description = "Quanta Mechanistic Interpretability tools"
 authors = [{name = "Philip Quirke et al", email = "philipquirkenz@gmail.com"}]
 dependencies = [
     "numpy>=1.18.1",
-    "wheel",
     "plotly",
     "matplotlib",
     "scikit-learn",
     "scikit-optimize",
     "transformer_lens",
     "transformers",
-    "torch"    
+    "typeguard>=3.0.2",
+    "torch>=1.10",
+    "torchtyping>=0.1.4"
 ]
 
 classifiers = [
