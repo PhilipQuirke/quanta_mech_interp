@@ -34,8 +34,6 @@
     <Compile Include="QuantaMechInterp\model_loss_graph.py" />
     <Compile Include="QuantaMechInterp\model_pca.py" />
     <Compile Include="QuantaMechInterp\model_sae.py" />
-    <Compile Include="QuantaMechInterp\model_sae_graph.py" />
-    <Compile Include="QuantaMechInterp\model_sae_train.py" />
     <Compile Include="QuantaMechInterp\model_token_to_char.py" />
     <Compile Include="QuantaMechInterp\model_train.py" />
     <Compile Include="QuantaMechInterp\model_train_json.py" />

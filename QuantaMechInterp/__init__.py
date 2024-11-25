@@ -7,8 +7,6 @@ from .model_loss_graph import plot_loss_lines, plot_loss_lines_layout
 
 
 from .model_sae import AdaptiveSparseAutoencoder, save_sae_to_huggingface 
-from .model_sae_train import analyze_mlp_with_sae, optimize_sae_hyperparameters
-from .model_sae_graph import analyze_and_visualize_sae
 
 
 # useful_*.py: Contains data on the useful token positions and useful nodes (attention heads and MLP neurons) that the model uses in predictions

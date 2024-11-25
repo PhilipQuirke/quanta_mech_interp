@@ -102,7 +102,7 @@ def a_calc_mean_values(cfg, the_questions):
     sample_logits, sample_cache = cfg.main_model.run_with_cache(the_questions.cuda())
     print("Cache names", sample_cache) # Gives names of datasets in the cache
     sample_losses_raw, _ = logits_to_tokens_loss(cfg, sample_logits, the_questions.cuda())
-    sample_loss_mean = utils.to_numpy(loss_fn(sample_losses_raw).mean())
+    sample_loss_mean = to_numpy(loss_fn(sample_losses_raw).mean())
     print("Sample Mean Loss", sample_loss_mean) # Loss < 0.04 is good
 
 
@@ -170,7 +170,7 @@ def a_run_attention_intervention(cfg, store_question_and_answer, clean_question_
         acfg.abort = True
         print( "Bad all_losses_raw", all_losses_raw.shape, store_question_and_answer, clean_question_and_answer )
         return description + "(Aborted on Bad all_losses_raw)"
-    loss_max = utils.to_numpy(loss_fn(all_losses_raw[0]).max())
+    loss_max = to_numpy(loss_fn(all_losses_raw[0]).max())
     acfg.intervened_answer = tokens_to_string(cfg, all_max_prob_tokens[0])
 
 
