@@ -3,7 +3,7 @@ import torch
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-from ablate_hooks import to_numpy
+from .ablate_hooks import to_numpy
 
 
 def plot_loss_lines_layout(cfg, fig, tick_font_size, x, width=1200, height=400):
