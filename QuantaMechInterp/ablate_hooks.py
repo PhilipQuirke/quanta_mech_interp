@@ -1,5 +1,5 @@
 import torch
-import transformer_lens.utils as utils
+import numpy as np
 
 from .model_token_to_char import tokens_to_string
 from .model_train import logits_to_tokens_loss, loss_fn
@@ -7,6 +7,22 @@ from .quanta_map_impact import get_answer_impact
 from .quanta_constants import NO_IMPACT_TAG
 from .ablate_config import acfg
 
+
+def to_numpy(tensor):
+    """
+    Helper function to convert a tensor to a numpy array. Also works on lists, tuples, and numpy arrays.
+    """
+    if isinstance(tensor, np.ndarray):
+        return tensor
+    elif isinstance(tensor, (list, tuple)):
+        array = np.array(tensor)
+        return array
+    elif isinstance(tensor, (torch.Tensor, torch.nn.parameter.Parameter)):
+        return tensor.detach().cpu().numpy()
+    elif isinstance(tensor, (int, float, bool, str)):
+        return np.array(tensor)
+    else:
+        raise ValueError(f"Input to to_numpy has invalid type: {type(tensor)}")
 
 
 # (Question and answer) position ablation.

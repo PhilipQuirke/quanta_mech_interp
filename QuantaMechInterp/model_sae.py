@@ -1,10 +1,5 @@
 import torch
 import torch.nn as nn
-import torch.optim as optim
-from torch.utils.data import DataLoader, TensorDataset
-import transformer_lens.utils as utils
-import itertools
-from sklearn.model_selection import ParameterGrid
 import numpy as np
 from transformers import PreTrainedModel, PretrainedConfig
 

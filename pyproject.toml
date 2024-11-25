@@ -13,7 +13,6 @@ dependencies = [
     "matplotlib",
     "scikit-learn",
     "scikit-optimize",
-    "transformer_lens",
     "transformers",
     "typeguard>=3.0.2",
     "torch>=1.10",

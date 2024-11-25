@@ -1,9 +1,9 @@
 import math
 import torch
 import numpy as np
-import transformer_lens.utils as utils
 import plotly.express as px
 import plotly.graph_objects as go
+from ablate_hooks import to_numpy
 
 
 def plot_loss_lines_layout(cfg, fig, tick_font_size, x, width=1200, height=400):
@@ -78,7 +78,7 @@ def plot_loss_lines(cfg, steps_to_graph : int, raw_lines_list,
 
     for c, line in enumerate(lines_list):
         if type(line)==torch.Tensor:
-            line = utils.to_numpy(line)
+            line = to_numpy(line)
         if labels is not None:
             label = labels[c]
         else:

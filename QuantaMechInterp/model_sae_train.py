@@ -2,14 +2,11 @@ import os
 import json
 import numpy as np
 import torch
-import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import  DataLoader
 import transformer_lens.utils as utils
 import hashlib
-from sklearn.model_selection import ParameterGrid
 from skopt import gp_minimize
-from skopt.space import Real, Integer, Categorical
+from skopt.space import Real, Integer
 from skopt.utils import use_named_args
 
 from QuantaMechInterp.model_sae import AdaptiveSparseAutoencoder, save_sae_to_huggingface

@@ -1,5 +1,3 @@
-import transformer_lens.utils as utils
-
 from .quanta_constants import NO_IMPACT_TAG 
 
 
@@ -29,14 +27,15 @@ class AblateConfig():
         # How many of the manually-curated varied_questions can the model answer?
         self.num_varied_successes = 0
 
+        # These node names are model specific. For maths, they are set in maths_config.py configure_acfg_singleton
         # attn.hook_z is the "attention head output" hook point name (at a specified layer)
-        self.l_attn_hook_z_name = [utils.get_act_name('z', 0, 'a'),utils.get_act_name('z', 1, 'a'),utils.get_act_name('z', 2, 'a'),utils.get_act_name('z', 3, 'a')] # 'blocks.0.attn.hook_z' etc
+        self.l_attn_hook_z_name = []
         # hook_resid_pre is the "pre residual memory update" hook point name (at a specified layer)
-        self.l_hook_resid_pre_name = ['blocks.0.hook_resid_pre','blocks.1.hook_resid_pre','blocks.2.hook_resid_pre','blocks.3.hook_resid_pre']
+        self.l_hook_resid_pre_name = []
         # hook_resid_post is the "post residual memory update" hook point name (at a specified layer)
-        self.l_hook_resid_post_name = ['blocks.0.hook_resid_post','blocks.1.hook_resid_post','blocks.2.hook_resid_post','blocks.3.hook_resid_post']
+        self.l_hook_resid_post_name = []
         # mlp.hook_post is the "MLP layer" hook point name (at a specified layer)
-        self.l_mlp_hook_post_name = [utils.get_act_name('post', 0),utils.get_act_name('post', 1),utils.get_act_name('post', 2),utils.get_act_name('post', 3)] # 'blocks.0.mlp.hook_post' etc
+        self.l_mlp_hook_post_name = []
 
         # A list of hooks that action the ablation interventions
         self.resid_put_hooks = [] # layer level

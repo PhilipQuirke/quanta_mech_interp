@@ -24,7 +24,7 @@ from .quanta_filter import FilterNode, FilterAnd, FilterOr, FilterName, FilterTr
 
 # ablate_*.py: Contains ways to "intervention ablate" the model and detect the impact of the ablation
 from .ablate_config import AblateConfig, acfg
-from .ablate_hooks import a_put_resid_post_hook, a_set_ablate_hooks, a_calc_mean_values, a_predict_questions, a_run_attention_intervention
+from .ablate_hooks import to_numpy, a_put_resid_post_hook, a_set_ablate_hooks, a_calc_mean_values, a_predict_questions, a_run_attention_intervention
 from .ablate_add_useful import ablate_mlp_and_add_useful_node_tags, ablate_head_and_add_useful_node_tags
 
 # model_pca.py: Ways to extract PCA information from model
