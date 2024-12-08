@@ -12,7 +12,7 @@ class ModelConfig():
         # Model name for models stored on HuggingFace
         self.model_name = ""
         
-        # The transformer lens model
+        # The main model
         self.main_model = None
 
         # Model shape configuration
@@ -70,7 +70,9 @@ class ModelConfig():
         # Format to save graphs to CoLab temp files. 
         # Temp files can then be manually exported for re-use in papers etc.
         self.graph_file_suffix = "pdf" # Can be pdf, svg, png or blank to suppress saving
-    
+
+        self.file_config_prefix = ""
+
  
     def initialize_token_positions(self, num_question_positions, num_answer_positions, answer_meanings_ascend ):
         # The number of "question" (input) token positions e.g. len("12340+12340=")    
