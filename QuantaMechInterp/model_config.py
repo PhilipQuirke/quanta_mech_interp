@@ -9,8 +9,8 @@ from .useful_node import answer_name
 class ModelConfig():
 
     def __init__(self):
-        # Model name for models stored on HuggingFace
-        self.model_name = ""
+        self.hf_repo : str = "" # HuggingFace repository containing the model e.g. "PhilipQuirke/VerifiedArithmetic"
+        self.model_name : str = "" # Name of the model e.g. "ins1_mix_d6_l3_h4_t40K_s372001"
         
         # The main model
         self.main_model = None
@@ -212,6 +212,7 @@ class ModelConfig():
     # Return a dictionary of all the model configuration parameters
     def to_dict(self):
         return {
+            "hf_repo": self.hf_repo,
             "model_name": self.model_name,
             "n_layers": self.n_layers,
             "n_heads": self.n_heads,
@@ -242,6 +243,7 @@ class ModelConfig():
     
     # Set attributes from JSON data, using default values if attributes are missing
     def init_from_json(self, data):
+        self.hf_repo = data.get('hf_repo', self.hf_repo)
         self.model_name = data.get('model_name', self.model_name)
         self.n_layers = data.get('n_layers', self.n_layers)
         self.n_heads = data.get('n_heads', self.n_heads)

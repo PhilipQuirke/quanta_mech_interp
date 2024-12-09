@@ -20,7 +20,7 @@ def row_location_name(layer : int, is_head : bool, num : int):
 
 
 # Return "P19L1H2" or "P19L1M0"
-def location_name(position : int, layer : int, is_head : bool, num : int, short_position = True):
+def location_name(position : int, layer : int, is_head : bool, num : int, short_position = False):
     pos_str = str(position) 
     if not short_position and len(pos_str)<2:
         pos_str = "0" + pos_str    
@@ -52,7 +52,7 @@ class NodeLocation():
     
 
     # Node name e.g. "P14L2H3" or "P14L2M0"
-    def name(self, short_position = True ):
+    def name(self, short_position = False ):
         return location_name(self.position,self.layer,self.is_head,self.num, short_position)
 
 
