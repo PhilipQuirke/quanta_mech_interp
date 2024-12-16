@@ -8,7 +8,7 @@ This reuseable library, helps a researcher investigate a model's **algorithm** b
 - searching a model's attention head(s) or an MLP layer that satisfy a model feature's criteria
 - storing the features found in the same json format
 - declaring a hypothesised **model algorithm** as a set of model features that must exist 
-- evaluate a hypothesised algorithm against a model's stored facts
+- evaluating a hypothesised algorithm to see if all the required features exist using the model's stored facts
 
 ## Folders, Files and Classes 
 This library contains files:
