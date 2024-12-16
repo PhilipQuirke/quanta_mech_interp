@@ -13,7 +13,7 @@ This reuseable library, helps a researcher investigate a model's **algorithm** b
 The library includes:
 - A technique [Useful Nodes](./useful_tags.md) to reduce the model "search space" - speeding up and reducing the cost of searching.
 - Multiple visualizations of model useful nodes, facts and features e.g.
-- 
+
 ![Attention](./assets/ins1_mix_d6_l3_h4_t40K_s372001AttentionBehaviorPerHead.svg?raw=true "Attention")
 
 ## Folders, Files and Classes 
