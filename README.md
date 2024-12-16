@@ -14,7 +14,7 @@ This reuseable library, helps a researcher investigate a model's **algorithm** b
 This library contains files:
 - **QuantaMechInterp:** Python library code imported into the notebooks:
   - model_*.py: Contains the configuration of the transformer model being trained/analysed. Includes class ModelConfig 
-  - useful_*.py: Contains data on the useful token positions and useful nodes (attention heads and MLP neurons) that the model uses in predictions. Includes class UsefulConfig derived from ModelConfig. 
+  - useful_*.py: Contains data on the useful token positions and useful nodes (attention heads and MLP neurons) that the model uses in predictions. Includes class UsefulConfig derived from ModelConfig. Refer [Useful_Tags](./useful_tags.md) for more detail. 
   - algo_*.py: Contains tools to support declaring and validating a model algorithm. Includes class AlgoConfig derived from UsefulConfig.
   - quanta_*.py: Contains categorisations of model behavior (aka quanta), with ways to detect, filter and graph them. Refer [Filter](./filter.md) for more detail. 
   - ablate_*.py: Contains ways to "intervention ablate" the model and detect the impact of the ablation
