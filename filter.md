@@ -1,8 +1,36 @@
 # Node Filters
-Using the below filter classes, you can filter the useful nodes, based on the node tags, to get the matching node subset.
+
+Each hypothesised model feature is assigned a set of expected facts that characterise and identify it.
+Some feature facts can be declared as "node filters". 
+When searching a specific model for the hypothesised feature, these filters reduce the search space size, saving time and money.      
+
+## Filter Use 
+As an example, suppose we have an arithmetic addition model, and want to find all "candidate" nodes that:
+- Are at token position P14
+- Are an attention head
+- Attend to (at least) D2 and D'2
+- Impact (at least) answer token A3
+
+In a Colab, we can find the candidate nodes with this filter:
+
+````
+import QuantaMechInterp as qt
+
+my_filters = qt.FilterAnd(
+    qt.FilterHead(),  # Is an attention head
+    qt.FilterPosition(qt.position_name(14)), # Is at token position 14
+    qt.FilterAttention(cfg.dn_to_position_name(2)), # Attends to D2
+    qt.FilterAttention(cfg.ddn_to_position_name(2)), # Attends to D'2
+    qt.FilterImpact(qt.answer_name(3))) # Impacts third answer token
+
+test_nodes = qt.filter_nodes(cfg.useful_nodes, my_filters)
+````
+Note:
+- Filters find candidate nodes that _could_ implement a specific algorithmic task. 
+- Confirming that a node _does_ implement the algorithmic task may require additional context-specific tests.
 
 ## Filter Types
-The generic Filters are:
+The available Filters are:
 - FilterAnd: node must satisfy all the child criteria to be selected 
 - FilterOr: node must satisfy at least one child criteria to be selected
 - FilterHead: node must be an attention head
@@ -14,28 +42,3 @@ The generic Filters are:
 - FilterAlgo: node must have the specified algorithm tag
 
 The library can be extended with topic-additional specific filter classes
-
-## Filter Use 
-Filters are often used to find candidate nodes that _could_ implement a specific algorithmic task. 
-Confirming that a node _does_ implement the algorithmic task is not covered here.
-
-As an example, suppose we have an addition model, and want to find all "candidate" nodes that:
-- Are at position P14
-- Are an attention head
-- Attend to (at least) D2 and D'2
-- Impact (at least) answer token A3
-
-In a Colab, we can find the candidate nodes with this filter:
-
-````
-import QuantaMechInterp as qt
-
-my_filters = qt.FilterAnd(
-    qt.FilterHead(),
-    qt.FilterPosition(qt.position_name(14)), # Is at token position 14
-    qt.FilterAttention(cfg.dn_to_position_name(2)), # Attends to D2
-    qt.FilterAttention(cfg.ddn_to_position_name(2)), # Attends to D'2
-    qt.FilterImpact(qt.answer_name(3))) # Impacts third answer token
-
-test_nodes = qt.filter_nodes(cfg.useful_nodes, my_filters)
-````
