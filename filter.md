@@ -2,7 +2,7 @@
 
 Model features are implemented by model nodes (attention heads and MLP layers).
 How do we map from a hypothesised model feature to a set of actual model nodes?
-We start by declaring a set of expected facts that characterise and identify the model fature.
+We start by declaring a set of expected facts that characterise and identify the model features.
 Many facts can be declared as "node filters". 
 When searching a specific model for a hypothesised feature, these filters reduce the search space size, saving time and money.      
 
