@@ -32,10 +32,10 @@ import QuantaMechInterp as qt
 
 my_filters = qt.FilterAnd(
     qt.FilterHead(),
-    qt.FilterPosition(qt.position_name(14)),
+    qt.FilterPosition(qt.position_name(14)), # Is at token position 14
     qt.FilterAttention(cfg.dn_to_position_name(2)), # Attends to D2
     qt.FilterAttention(cfg.ddn_to_position_name(2)), # Attends to D'2
-    qt.FilterImpact(qt.answer_name(3))) # Impacts A3
+    qt.FilterImpact(qt.answer_name(3))) # Impacts third answer token
 
 test_nodes = qt.filter_nodes(cfg.useful_nodes, my_filters)
 ````
