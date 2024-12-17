@@ -56,4 +56,4 @@ P9L0H3 ['Fail:0', 'Impact:A7', 'MathSub:NG', 'Attn:P6=84', 'Attn:P9=6', 'Attn:P8
 P9L0M0 ['Fail:11', 'Impact:A765', 'MathAdd:S12345', 'MathSub:M123']
 ```
 
-This JSON format can be extended with addition categorises of facts.
+This JSON format can be extended with additional categorises of facts.
