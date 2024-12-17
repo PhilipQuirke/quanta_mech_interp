@@ -1,17 +1,19 @@
 # Node Filters
 
-Each hypothesised model feature is assigned a set of expected facts that characterise and identify it.
-Some feature facts can be declared as "node filters". 
-When searching a specific model for the hypothesised feature, these filters reduce the search space size, saving time and money.      
+Model features are implemented by model nodes (attention heads and MLP layers).
+How do we map from a hypothesised model feature to a set of actual model nodes?
+We start by declaring a set of expected facts that characterise and identify the model fature.
+Many facts can be declared as "node filters". 
+When searching a specific model for a hypothesised feature, these filters reduce the search space size, saving time and money.      
 
 ## Filter Use 
-As an example, suppose we have an arithmetic addition model, and want to find all "candidate" nodes that:
-- Are at token position P14
-- Are an attention head
-- Attend to (at least) D2 and D'2
-- Impact (at least) answer token A3
+As an example, suppose we have an arithmetic addition model, searching for a feature that has these characteristics:
+- Is at token position P14
+- Is implemented using attention heads
+- Attends to (at least) D2 and D'2
+- Impacts (at least) answer token A3
 
-In a Colab, we can find the candidate nodes with this filter:
+In a Colab, we can find search the nodes (cfg.useful_nodes) using this filter:
 
 ````
 import QuantaMechInterp as qt
@@ -25,9 +27,8 @@ my_filters = qt.FilterAnd(
 
 test_nodes = qt.filter_nodes(cfg.useful_nodes, my_filters)
 ````
-Note:
-- Filters find candidate nodes that _could_ implement a specific algorithmic task. 
-- Confirming that a node _does_ implement the algorithmic task may require additional context-specific tests.
+Filters find candidate nodes that _could_ implement a specific algorithmic task. 
+Confirming that a node _does_ implement the algorithmic task may require an additional context-specific test.
 
 ## Filter Types
 The available Filters are:
@@ -41,4 +42,4 @@ The available Filters are:
 - FilterImpact: node must impact the specified answer token(s)
 - FilterAlgo: node must have the specified algorithm tag
 
-The library can be extended with topic-additional specific filter classes
+The library can be extended with topic-additional specific filter classes as desired.
