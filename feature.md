@@ -7,7 +7,7 @@ This library uses a class per feature. The class describes a feature in terms of
 More specifically, the class includes functions to:
 - Declare a tag (aka short name) for the feature e.g. "P18.SC"
 - Declare a set of characteristics that identify "candidate" model nodes that _could_ implement the feature. Refer [Filtering](./filter.md) for more detail.
-- Implement a strong attribution (ablation) test to confirm whether a candiate node _does_ implement the feature. The test define the expected explicit impact on the model prediction.    
+- Implement a strong attribution (ablation) test to confirm whether a candiate node _does_ implement the feature. The test defines the expected impact on the model prediction.    
 
 For a given model, this class is applied to the useful nodes to find the actual node(s), if any, that implement the feature.
 When the feature is found, the feature tag is added to the node (and is subsequently stored in the JSON file).  
