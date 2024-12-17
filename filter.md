@@ -6,14 +6,14 @@ We start by declaring a set of expected facts that characterise and identify the
 Many facts can be declared as "node filters". 
 When searching a specific model for a hypothesised feature, these filters reduce the search space size, saving time and money.      
 
-## Filter Use 
-As an example, suppose we have an arithmetic addition model, searching for a feature that has these characteristics:
+## Example 
+Suppose we have an arithmetic addition model, and are searching for a feature that has these characteristics:
 - Is at token position P14
 - Is implemented using attention heads
 - Attends to (at least) D2 and D'2
 - Impacts (at least) answer token A3
 
-In a Colab, we can find search the nodes (cfg.useful_nodes) using this filter:
+In a Colab, we can find search the model's useful nodes (cfg.useful_nodes) for this feature using this filter:
 
 ````
 import QuantaMechInterp as qt
@@ -27,8 +27,9 @@ my_filters = qt.FilterAnd(
 
 test_nodes = qt.filter_nodes(cfg.useful_nodes, my_filters)
 ````
-Filters find candidate nodes that _could_ implement a specific algorithmic task. 
-Confirming that a node _does_ implement the algorithmic task may require an additional context-specific test.
+
+Filters find candidate nodes that _could_ implement a specific model feature. 
+Confirming that a node _does_ implement the model feature may require an additional context-specific test.
 
 ## Filter Types
 The available Filters are:
