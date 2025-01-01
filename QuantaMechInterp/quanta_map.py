@@ -68,7 +68,7 @@ def show_quanta_patch(ax, col : float, row : float, cell_color : str, width : in
 
 # Draw one cell's text
 def show_quanta_text(ax, col : float, row : float, text : str, fontsize : int):
-    if (text != None) and (text != ""): 
+    if (text is not None) and (text != ""): 
         ax.text(col + 0.5, row + 0.5, text, ha='center', va='center', color='black', fontsize=fontsize)
 
 
@@ -198,18 +198,18 @@ def calc_quanta_map( cfg, standard_quanta : bool, num_shades : int,
             cell_text = None
 
             result = find_quanta_result_by_row_col(the_row_name, the_position, quanta_results)
-            if (result != None) and (result.cell_text != None) and (result.cell_text != ""):
+            if (result is not None) and (result.cell_text is not None) and (result.cell_text != ""):
                 num_results += 1
                 cell_text = result.cell_text.rstrip().replace(" ", "\n").replace(" ", "\n").replace(" ", "\n")
                 if result.color_index >= 0:
                     show_quanta_patch(ax1, col_idx, row_idx, colors[max(0, min(result.color_index, num_shades-1))])          
         
-            if combine_identical_cells and (cell_text != None) and (previous_text != None) and (cell_text == previous_text) and (row_idx != num_data_rows - 1):
+            if combine_identical_cells and (cell_text is not None) and (previous_text is not None) and (cell_text == previous_text) and (row_idx != num_data_rows - 1):
                 # Retain existing previous_text and merge_start_row values
                 pass 
 
             else:
-                if previous_text != None:
+                if previous_text is not None:
                     # Draw the previous sequence of similar cells (excluding this row which is different)
                     merge_end_row = row_idx + 1
                     show_quanta_cells(ax1, col_idx, merge_start_row, merge_end_row, previous_text, cell_fontsize, show_perc_circles, max_perc)  
@@ -220,7 +220,7 @@ def calc_quanta_map( cfg, standard_quanta : bool, num_shades : int,
         
             row_idx -= 1
             
-        if previous_text != None:
+        if previous_text is not None:
             # Draw the last cell(s)
             show_quanta_cells(ax1, col_idx, merge_start_row, 0, previous_text, cell_fontsize, show_perc_circles, max_perc)  
 
@@ -307,7 +307,7 @@ def calc_quanta_map_numeric( cfg, standard_quanta : bool, num_shades : int, \
             cell_text = None
 
             result = find_quanta_result_by_row_col(the_row_name, the_position, quanta_results)
-            if (result != None) and (result.cell_text != None) and (result.cell_text != ""):
+            if (result is not None) and (result.cell_text is not None) and (result.cell_text != ""):
                 num_results += 1
                 cell_text = result.cell_text.rstrip().replace(" ", "\n").replace(" ", "\n").replace(" ", "\n")
                 if result.color_index >= 0:
