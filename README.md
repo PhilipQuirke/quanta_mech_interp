@@ -38,3 +38,4 @@ pip install .
 ## Context
 This library was created as part of the [Understanding Addition in Transformers](https://arxiv.org/pdf/2310.13121) and [Increasing Trust in Language Models through the Reuse of Verified Circuits](https://arxiv.org/pdf/2402.02619)1
 papers. The library is also used by the in-flight "TinySQL" project funded by [WithMartian](https://withmartian.com/)  
+
