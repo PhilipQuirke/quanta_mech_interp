@@ -22,6 +22,11 @@ from Tests.test_algo_search import (
     TestSubTaskBase, TestSearchAndTagDigitPosition, TestSearchAndTagDigit,
     TestSearchAndTag, TestIntegration as TestAlgoSearchIntegration
 )
+from Tests.test_quanta_map_impact import (
+    TestGetAnswerImpact, TestGetQuestionAnswerImpact, TestIsAnswerSequential,
+    TestCompactAnswerIfSequential, TestGetQuantaImpact, TestSortUniqueDigits,
+    TestIntegration as TestQuantaMapImpactIntegration
+)
 
 
 if __name__ == '__main__':
@@ -38,7 +43,10 @@ if __name__ == '__main__':
         TestFindQuantaResultByRowCol, TestStrToPerc, TestCalcQuantaMapSize,
         TestCalcQuantaRowsCols, TestQuantaMapIntegration, TestQuantaMapVisualizationFunctions,
         TestSubTaskBase, TestSearchAndTagDigitPosition, TestSearchAndTagDigit,
-        TestSearchAndTag, TestAlgoSearchIntegration
+        TestSearchAndTag, TestAlgoSearchIntegration,
+        TestGetAnswerImpact, TestGetQuestionAnswerImpact, TestIsAnswerSequential,
+        TestCompactAnswerIfSequential, TestGetQuantaImpact, TestSortUniqueDigits,
+        TestQuantaMapImpactIntegration
     ]
 
     loader = unittest.TestLoader()
