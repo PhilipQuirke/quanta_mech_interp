@@ -29,8 +29,13 @@ class AdaptiveSparseAutoencoder(nn.Module):
         self.encoder = nn.Sequential(
             nn.Linear(input_dim, self.encoding_dim),
             nn.ReLU()
-        ).cuda()
-        self.decoder = nn.Linear(self.encoding_dim, input_dim).cuda()
+        )
+        self.decoder = nn.Linear(self.encoding_dim, input_dim)
+        
+        # Move to CUDA if available
+        if torch.cuda.is_available():
+            self.encoder = self.encoder.cuda()
+            self.decoder = self.decoder.cuda()
     
     def forward(self, x):
         encoded = self.encoder(x)

@@ -4,11 +4,11 @@
 This reuseable library, helps a researcher investigate a model's **algorithm** by:
 - searching a model to discover interesting (generic or topic-specific) **model facts** 
 - **storing facts** learnt about a model using any Mech Interp (MI) technique in a common json format
-- declaring a hypothesised **model feature** as a set of facts (criteria) that must be satisfied 
+- declaring a hypothesized **model feature** as a set of facts (criteria) that must be satisfied 
 - searching a model's attention head(s) or an MLP layer that satisfy a model feature's criteria
 - storing the features found in the same json format
-- declaring a hypothesised **model algorithm** as a set of model features that must exist 
-- evaluating a hypothesised algorithm to see if all the required features exist using the model's stored facts
+- declaring a hypothesized **model algorithm** as a set of model features that must exist 
+- evaluating a hypothesized algorithm to see if all the required features exist using the model's stored facts
 
 The library includes:
 - A technique [Useful Nodes](./useful_tags.md) to reduce the model "search space" to just nodes important to the model's prediction accuracy. 
@@ -20,10 +20,10 @@ The library includes:
 ## Folders, Files and Classes 
 This library contains files:
 - **QuantaMechInterp:** Python library code imported into the notebooks:
-  - model_*.py: Contains the configuration of the transformer model being trained/analysed. Includes class ModelConfig 
+  - model_*.py: Contains the configuration of the transformer model being trained/analyzed. Includes class ModelConfig 
   - useful_*.py: Contains data on the useful token positions and useful nodes (attention heads and MLP neurons) that the model uses in predictions. Includes class UsefulConfig derived from ModelConfig. Refer [Useful_Tags](./useful_tags.md) for more detail. 
   - algo_*.py: Contains tools to support declaring and validating a model algorithm. Includes class AlgoConfig derived from UsefulConfig.
-  - quanta_*.py: Contains categorisations of model behavior (aka quanta), with ways to detect, filter and graph them. Refer [Filter](./filter.md) for more detail. 
+  - quanta_*.py: Contains categorizations of model behavior (aka quanta), with ways to detect, filter and graph them. Refer [Filter](./filter.md) for more detail. 
   - ablate_*.py: Contains ways to "intervention ablate" the model and detect the impact of the ablation
 
 ## Installation
