@@ -13,6 +13,15 @@ from Tests.tests_model_sae import (
     TestSafeMathFunctions, TestAdaptiveSparseAutoencoder, TestSparseAutoencoderConfig,
     TestSparseAutoencoderForHF, TestSaveToHuggingFace, TestIntegration
 )
+from Tests.test_quanta_result import (
+    TestQuantaResult, TestCalcQuantaResults, TestCreateColormap, TestPaleColor,
+    TestFindQuantaResultByRowCol, TestStrToPerc, TestCalcQuantaMapSize,
+    TestCalcQuantaRowsCols, TestQuantaMapIntegration, TestQuantaMapVisualizationFunctions
+)
+from Tests.test_algo_search import (
+    TestSubTaskBase, TestSearchAndTagDigitPosition, TestSearchAndTagDigit,
+    TestSearchAndTag, TestIntegration as TestAlgoSearchIntegration
+)
 
 
 if __name__ == '__main__':
@@ -24,7 +33,12 @@ if __name__ == '__main__':
         TestFilterAlgo, TestFilterAnd, TestFilterOr, TestFilterNodes,
         TestPrintAlgoPurposeResults, TestComplexFilterScenarios,
         TestSafeMathFunctions, TestAdaptiveSparseAutoencoder, TestSparseAutoencoderConfig,
-        TestSparseAutoencoderForHF, TestSaveToHuggingFace, TestIntegration
+        TestSparseAutoencoderForHF, TestSaveToHuggingFace, TestIntegration,
+        TestQuantaResult, TestCalcQuantaResults, TestCreateColormap, TestPaleColor,
+        TestFindQuantaResultByRowCol, TestStrToPerc, TestCalcQuantaMapSize,
+        TestCalcQuantaRowsCols, TestQuantaMapIntegration, TestQuantaMapVisualizationFunctions,
+        TestSubTaskBase, TestSearchAndTagDigitPosition, TestSearchAndTagDigit,
+        TestSearchAndTag, TestAlgoSearchIntegration
     ]
 
     loader = unittest.TestLoader()
